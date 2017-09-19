@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'enechanges#index'
 
   namespace :apis, { format: 'json' } do
+    match "/energy/:user_id/:year" => "energy#energy_production", :via => [:get]
+    match "/average" => "energy#average", :via => [:get]
   end
 
   get '*path' => redirect("/")

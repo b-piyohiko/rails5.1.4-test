@@ -5,16 +5,12 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
-import App from './app.vue'
+import Vue from 'vue';
+import App from './app.vue';
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(document.createElement('hello'))
-  const app = new Vue(App).$mount('hello')
+import ChartJS from 'chart.js';
 
-  console.log(app)
-})
-
+new Vue(App).$mount("#app");
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
